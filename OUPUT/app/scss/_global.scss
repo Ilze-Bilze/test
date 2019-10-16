@@ -1,0 +1,173 @@
+html {
+    display: block;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+html,
+body {
+    margin: 0 0;
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;   
+}
+
+body {
+    color: $black;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-weight: 300;
+}
+article {
+    position: relative;
+    padding-bottom: 60px;
+}
+header {
+    display: flex;
+    align-items: baseline;
+    min-height: 228px;
+    background-color: $green;
+    h1 {
+        margin: auto;
+        color: $white;
+    }
+}
+.row {
+    display: flex;
+    margin: 0 auto;
+    align-items: baseline;
+    .wrapper {
+        margin: auto;
+        max-width: 700px;
+        padding: 60px 32px 40px 32px;
+        text-align: center;
+        @media #{$mq-1024-up}{
+            text-align: left;
+            padding: 60px 15px;
+        }
+        h2 {
+            display: block;
+            border-bottom: 1px solid $gray;
+            margin-left: -32px;
+            margin-right: -32px;
+            padding-bottom: 60px;
+            margin-bottom: 60px;
+            @media #{$mq-640-up}{
+                display: none;
+            }
+        }
+    }
+}
+ul.social-icons {
+    display: none;
+    position: fixed;
+    top: 255px;
+    right: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    background: $dkBlue;
+    color: $white;
+    margin: 0;
+    padding: 10px 10px 10px 25px;
+    @media #{$mq-1024-up}{
+        display: flex;
+    }
+    li {
+        display: block;
+        list-style: none;
+        a {
+            display: block;
+            padding: 5px 0;
+            color: $white;
+            font-size: 20px;
+        }
+    }
+}
+ul:not(.social-icons) {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    @media #{$mq-1024-up} {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+    li {
+        width: 100%;
+        border-bottom: 1px solid $gray;
+        list-style: none;
+        &:first-child {
+            border-top: 1px solid $gray;
+        }
+        @media #{$mq-1024-up} {
+            width: 33.333%;
+            &:nth-child(-n+3) {
+                border-top: 1px solid $gray;
+            }
+            &:nth-child(3n+1) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &:nth-child(3n+2) {
+                width: 33.333%;
+                padding-right: 0;
+                border-left: 1px solid $gray;
+                border-right: 1px solid $gray;
+            }
+        }
+        @media #{$mq-1400-up} {
+            width: 35%;
+            padding-right: 5%;
+            &:nth-child(3n+1) {
+                width: 35%;
+                padding-left: 5%;
+                padding-right: 0;
+            }
+            &:nth-child(3n+2) {
+                width: 30%;
+                padding-right: 0;
+                border-left: 1px solid $gray;
+                border-right: 1px solid $gray;
+            }
+        }
+        .content {
+            position: relative;
+            padding: 32px;
+            @media #{$mq-1024-up} {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+            }
+        }
+        .box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background-color: $ltGray;
+            margin-bottom: 32px;
+            padding: 60px 32px;
+            @media #{$mq-1024-up} {
+                min-height: 260px;
+                max-height: 260px;
+                overflow: hidden;
+                padding: 0;
+            }
+            img {
+                display: block;
+                max-width: 50%;
+                margin: 0 auto;
+                height: auto;
+                align-self: center;
+                @media #{$mq-1024-up} {
+                    max-width: 100%;
+                }
+            }
+        }
+        p {
+            color: $dkGray;
+            font-size: 1.375rem;
+        }
+    }
+}

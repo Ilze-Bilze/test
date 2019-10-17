@@ -22,7 +22,11 @@ article {
     padding-bottom: 60px;
 }
 header {
-    display: flex;
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
     align-items: baseline;
     min-height: 228px;
     background-color: $green;
@@ -32,7 +36,11 @@ header {
     }
 }
 .row {
-    display: flex;
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
     margin: 0 auto;
     align-items: baseline;
     .wrapper {
@@ -69,7 +77,11 @@ ul.social-icons {
     margin: 0;
     padding: 10px 10px 10px 25px;
     @media #{$mq-1024-up}{
-        display: flex;
+        display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
     }
     li {
         display: block;
@@ -83,12 +95,18 @@ ul.social-icons {
     }
 }
 ul:not(.social-icons) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
     padding: 0;
     margin: 0;
     width: 100%;
     @media #{$mq-1024-up} {
+        -webkit-flex-flow: row wrap;
         flex-flow: row wrap;
         justify-content: flex-start;
     }
@@ -134,13 +152,22 @@ ul:not(.social-icons) {
             position: relative;
             padding: 32px;
             @media #{$mq-1024-up} {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
                 display: flex;
+                -webkit-flex-flow: row wrap;
                 flex-flow: row wrap;
                 justify-content: flex-start;
             }
         }
         .box {
             position: relative;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
             justify-content: center;
             background-color: $ltGray;

@@ -20,6 +20,10 @@ article {
   padding-bottom: 60px; }
 
 header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: baseline;
   min-height: 228px;
@@ -29,6 +33,10 @@ header {
     color: #ffffff; }
 
 .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   margin: 0 auto;
   align-items: baseline; }
@@ -65,6 +73,10 @@ ul.social-icons {
   padding: 10px 10px 10px 25px; }
   @media only screen and (min-width: 1024px) {
     ul.social-icons {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex; } }
   ul.social-icons li {
     display: block;
@@ -76,13 +88,19 @@ ul.social-icons {
       font-size: 20px; }
 
 ul:not(.social-icons) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-flow: column wrap;
   flex-flow: column wrap;
   padding: 0;
   margin: 0;
   width: 100%; }
   @media only screen and (min-width: 1024px) {
     ul:not(.social-icons) {
+      -webkit-flex-flow: row wrap;
       flex-flow: row wrap;
       justify-content: flex-start; } }
   ul:not(.social-icons) li {
@@ -122,11 +140,20 @@ ul:not(.social-icons) {
       padding: 32px; }
       @media only screen and (min-width: 1024px) {
         ul:not(.social-icons) li .content {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
           display: flex;
+          -webkit-flex-flow: row wrap;
           flex-flow: row wrap;
           justify-content: flex-start; } }
     ul:not(.social-icons) li .box {
       position: relative;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       justify-content: center;
       background-color: #f8f7f5;

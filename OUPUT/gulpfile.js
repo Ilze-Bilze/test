@@ -3,9 +3,11 @@ var sass = require('gulp-sass');
 
 // Compile 
 gulp.task('sass', function () { 
-	return gulp.src('app/scss/app.scss') 
-	.pipe(sass()
-		.on('error', sass.logError)) 
+	return gulp.src('app/scss/app.scss')
+	.pipe(sass({
+      outputStyle: 'compressed' // if css compressed **file size**
+    })
+		.on('error', sass.logError))
 	.pipe(gulp.dest('app/css'));
 });
 // Compile and watch 

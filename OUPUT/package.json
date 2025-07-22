@@ -21,7 +21,7 @@
   "homepage": "https://github.com/Ilze-Bilze/test#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^6.0.1"
   },
   "dependencies": {
     "fsevents": "^2.1.1",
